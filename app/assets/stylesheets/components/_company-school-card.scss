@@ -1,0 +1,66 @@
+.company-school-card {
+  background-color: white;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+
+  img {
+    border-radius: 8px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .company-school-card-info {
+    margin-left: 1rem;
+    width: 100%;
+    color: $gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .recruiting {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h2 {
+      margin: 0px;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: initial;
+    }
+
+    h3 {
+      margin: 0px;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      margin: 0.5rem 0 0 0;
+    }
+  }
+
+  .hiring-border {
+    border: 6px solid $flash-green;
+  }
+
+  @media(max-width: 500px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    img {
+      margin-bottom: 1rem;
+    }
+
+    .company-school-card-info {
+      align-items: center;
+    }
+
+  }
+
+}

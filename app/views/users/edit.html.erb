@@ -1,0 +1,46 @@
+<div class="navbar-wrapper">
+  <%= render 'shared/alert' %>
+</div>
+<%= form_for @student do |f| %>
+<div class="user-edit-wrapper">
+
+  <h3>Coordonnées</h3>
+
+
+  <div class="photo">
+      <% if @student.photo.attached? %>
+        <%= cl_image_tag @student.photo.key %>
+      <% else %>
+        <%= image_tag "blank-avatar.png" %>
+      <% end %>
+        <%= f.label :photo %>
+        <%= f.file_field :photo %>
+
+  </div>
+  <div class="input">
+
+    <div class="contact-details">
+      <div class="edit-field-wrapper">
+        <i class="fab fa-linkedin-in"></i>
+        <%= f.text_field :linkedin_url, placeholder: 'URL Linkedin', class: 'edit-input-field' %>
+      </div>
+      <div class="edit-field-wrapper">
+        <i class="fas fa-phone"></i>
+        <%= f.text_field :phone_number, placeholder: 'Numéro de téléphone', class: 'edit-input-field' %>
+      </div>
+      <div class="edit-field-wrapper">
+        <i class="fab fa-whatsapp"></i>
+        <%= f.text_field :whatsapp_number, placeholder: 'Numéro whatsApp', class: 'edit-input-field' %>
+      </div>
+    </div>
+  </div>
+
+  <%= f.submit 'Valider les modifications', class: 'full-button' %>
+</div>
+<% end %>
+
+
+
+
+
+

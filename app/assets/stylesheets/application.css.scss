@@ -1,0 +1,235 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "config/colors";
+@import "config/fonts";
+
+@import "pages/index";
+@import "components/index";
+
+
+body {
+  margin: 0;
+  color: $gray;
+  font-family: "Avenir Next", sans-serif;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: $dark-blue;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .list-style {
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+
+
+  .cover-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  #situation-green { color: $flash-green; }
+  #situation-orange { color: $flash-orange; }
+  #situation-red { color: $flash-red; }
+
+  .main-wrapper {
+    margin: 8rem 5rem 2rem 5rem;
+  }
+
+  .autocomplete-suggestions {
+    top: 316px !important;
+
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  input::-webkit-input-placeholder {
+    color: $medium-gray !important;
+  }
+
+  .logo-chartreux {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    width: 160px;
+  }
+
+  .shadow-div {
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+  }
+
+  .card-container {
+    padding: 1rem;
+    position: relative;
+  }
+
+  .list-inline {
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    ul > li {
+      display: inline-block;
+      margin-right: 0.5rem;
+      position: relative;
+    }
+  }
+
+  .notification {
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: initial;
+    padding: 0.6rem;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .red-border {
+    border-color: $flash-red;
+  }
+
+  .registration-wrap {
+    max-width: 560px;
+    margin: 16rem auto 0 auto;
+    position: relative;
+
+    .resistration-nav-wrap {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  .red {
+    color: $flash-red;
+  }
+
+  .orange {
+    color: $flash-orange;
+  }
+
+  .green {
+    color: $flash-green;
+  }
+
+
+
+  @media(max-width: 1850px) {
+
+    .main-wrapper {
+      margin: 8rem 2rem 2rem 2rem;
+    }
+
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media(max-width: 1300px) {
+
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media(max-width: 800px) {
+    .registration-wrap {
+      width: 90%;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media(max-width: 600px) {
+  }
+
+  @media(max-width: 500px) {
+
+    h1 {
+      font-size: 22px;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    label {
+      font-size: 12px;
+    }
+  }
+
+}

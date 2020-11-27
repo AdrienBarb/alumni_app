@@ -1,0 +1,37 @@
+<div class="navbar-wrapper">
+  <%= render 'shared/alert' %>
+</div>
+<div class="new-tag-wrapper">
+
+<%= image_tag('logo-chartreux.png', class: 'logo-chartreux') %>
+
+  <div class="tag-wrapper registration-wrap">
+    <div class="description">
+      <h1>Mes formations aux Chartreux</h1>
+      <p>Ajoutez les formations que vous avez effecutées aux Chartreux ainsi que l'année à laquelle vous avez / aurez fini. <br>Cela permet d’apparaitre dans les critères de recherche et garder contact avec les personnes de votre promo.</p>
+      <p>Vous pourez les modifier à tout moment dans votre profil.</p>
+    </div>
+
+    <div class="tags my-8">
+      <div class="tags-index list-inline">
+        <% if @tags.any? %>
+          <ul>
+            <% @tags.each do |tag| %>
+              <li>
+                <%= render 'shared/diploma-tag-big', tag: tag, student: @student %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    <%= render 'shared/tag-form', tag: @tag, diplomas: @diplomas %>
+    </div>
+
+    <%= link_to sector_creation_user_sectors_path, class: 'arrow-button float-right' do  %>
+      <p>Suivant</p>
+      <i class="fas fa-arrow-right"></i>
+    <% end %>
+  </div>
+
+
+</div>

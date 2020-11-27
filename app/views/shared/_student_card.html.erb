@@ -1,0 +1,37 @@
+<div class="student-card shadow-div card-container">
+
+  <% if student.photo.attached? %>
+    <%= cl_image_tag student.photo.key, class: situation_color(student) %>
+  <% else %>
+    <%= image_tag "blank-avatar.png", class: situation_color(student) %>
+  <% end %>
+
+  <div class="student-info">
+    <h3><%= student.full_name %></h3>
+    <div class="tags">
+      <% if student.tags.any? %>
+        <% student.tags.order(:year).last(2).each do |tag| %>
+          <%= render 'shared/diploma-tag-small', tag: tag %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <% if last_activity(student)[0] == true %>
+        <div class="current_experience">
+          <i class="fas fa-briefcase"></i>
+          <p><%= last_activity(student)[1] %></p>
+        </div>
+    <% elsif last_activity(student)[0] == false %>
+        <div class="current_experience">
+          <i class="fas fa-graduation-cap"></i>
+          <p><%= last_activity(student)[1] %></p>
+        </div>
+    <% end %>
+
+  </div>
+
+
+  <%= link_to '', user_path(student), class: 'cover-link' %>
+</div>
+
+

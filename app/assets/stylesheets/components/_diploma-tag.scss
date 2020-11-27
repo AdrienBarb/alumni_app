@@ -1,0 +1,113 @@
+.diploma-tag-big {
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 5px;
+  height: 26px;
+  white-space: nowrap;
+  position: relative;
+
+  .line {
+    width: 1px;
+    height: 16px;
+    margin: 0 0.5rem;
+  }
+
+  h5 {
+    margin: 0;
+    line-height: 0;
+    margin-right: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  p {
+    line-height: 0;
+    font-weight: 400;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  i {
+    font-size: 13px;
+  }
+
+}
+
+.diploma-tag-small {
+  padding: 0.15rem 0.3rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  height: 16px;
+  white-space: nowrap;
+  z-index: 1000;
+  position: relative;
+
+  h5 {
+    margin: 0;
+    line-height: 0;
+    margin-right: 0.2rem;
+    font-weight: 600;
+    font-size: 10px;
+  }
+
+  p {
+    line-height: 0;
+    font-weight: 400;
+    margin: 0;
+    font-size: 10px;
+  }
+}
+
+
+#diploma-red {
+  background-color: #E8BBBB;
+  color: #B11C1C;
+
+  a { color: #B11C1C; }
+  .line { background-color: #B11C1C; }
+}
+
+#diploma-yellow {
+  background-color: #F5D98A;
+  color: #C39409;
+
+  a { color: #C39409; }
+  .line { background-color: #C39409; }
+}
+
+// #diploma-yellow { (old yellow, lighter)
+//   background-color: #F7E2A6;
+//   color: #E9B61B;
+
+//   a { color: #E9B61B; }
+//   .line { background-color: #E9B61B; }
+// }
+
+#diploma-blue {
+  background-color: #C5C8DE;
+  color: #3D468F;
+
+  a { color: #3D468F; }
+  .line { background-color: #3D468F; }
+}
+
+#diploma-green {
+  background-color: #C6DED4;
+  color: #41916E;
+
+  a { color: #41916E; }
+  .line { background-color: #41916E; }
+}
+
+#diploma-grey {
+  background-color: #E1E1E1;
+  color: #9A9A9A;
+
+  a { color: #9A9A9A; }
+  .line { background-color: #9A9A9A; }
+}

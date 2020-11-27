@@ -1,0 +1,198 @@
+<div class="navbar-wrapper">
+  <%= render 'shared/alert' %>
+  <%= render 'shared/navbar' %>
+</div>
+
+
+<div class="user-show-wrapper main-wrapper">
+
+  <div class="left-side">
+
+    <div class="user-description-wrap shadow-div wrapper">
+      <% if @student == current_user %>
+        <%= link_to edit_user_path(@student) do %>
+          <%= render 'shared/edit-icon' %>
+        <% end %>
+      <% end %>
+
+      <div class="user-description">
+        <% if @student.photo.attached? %>
+          <%= cl_image_tag @student.photo.key %>
+        <% else %>
+          <%= image_tag "blank-avatar.png" %>
+        <% end %>
+        <div class="user-name-and-links">
+          <h1><span class="light-weigth"><%= @student.first_name %></span><br><%= @student.last_name %></h1>
+          <span class="line"></span>
+          <%= render 'shared/social-links', student: @student  %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="situation shadow-div wrapper">
+      <% if @student == current_user && (current_user.looking_for_job || current_user.looking_for_internship) %>
+        <%= link_to edit_situation_user_path(@student) do %>
+          <%= render 'shared/edit-icon' %>
+        <% end %>
+      <% end %>
+      <div class="content">
+        <h3>SITUATION</h3>
+        <% if @student.looking_for_job? || @student.looking_for_internship? %>
+          <% if @student.looking_for_job? %>
+            <div id="situation-red">
+              <h4>JE RECHERCHE UN EMPLOI</h4>
+            </div>
+          <% end %>
+          <% if @student.looking_for_internship? %>
+            <div id="situation-orange">
+              <h4>JE RECHERCHE UN STAGE</h4>
+            </div>
+          <% end %>
+        <% elsif @student == current_user %>
+            <%= link_to "Cliquez pour changez votre situation", edit_situation_user_path %>
+        <% else %>
+          <p><%= @student.first_name %> n'a pas précisé de recherche</p>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="diplomas shadow-div wrapper list-style">
+      <% if @student == current_user && @student.tags.any? %>
+        <%= link_to tags_path do %>
+          <%= render 'shared/edit-icon' %>
+        <% end %>
+      <% end %>
+      <div class="content">
+        <h3>DIPLÔMES</h3>
+
+        <% if @student.tags.any? %>
+          <ul>
+            <% @student.tags.order(:year).reverse.each do |tag| %>
+              <li>
+                <%= render 'shared/diploma-tag-big', tag: tag %>
+              </li>
+            <% end %>
+          </ul>
+        <% elsif @student == current_user %>
+          <%= link_to "Cliquez pour ajouter vos diplômes", tags_path %>
+        <% else %>
+          <p><%= @student.first_name %> n'a pas renseigné de formations aux Chartreux</p>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="sectors shadow-div wrapper list-style">
+      <% if @student == current_user && @student.user_sectors.any? %>
+        <%= link_to user_sectors_path do %>
+          <%= render 'shared/edit-icon' %>
+        <% end %>
+      <% end %>
+      <div class="content">
+        <h3>SECTEURS</h3>
+        <% if @student.user_sectors.any? %>
+          <ul>
+            <% @student.user_sectors.each do |user_sector| %>
+              <li>
+                <%= render 'shared/user-sector-card', user_sector: user_sector %>
+
+              </li>
+            <% end %>
+          </ul>
+        <% elsif @student == current_user %>
+          <%= link_to "Cliquez pour ajouter vos secteurs d'activités", user_sectors_path %>
+        <% else %>
+          <p><%= @student.first_name %> n'a pas renseigné de secteurs d'activité</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="right-side">
+
+    <div class="shadow-div wrapper">
+      <% if @student == current_user && @student.recruitments.any? %>
+        <%= link_to recruitments_path do %>
+          <%= render 'shared/edit-icon' %>
+        <% end %>
+      <% end %>
+      <div class="content">
+        <h3>RECRUTEMENT</h3>
+        <% if @student.recruitments.any? %>
+          <ul>
+            <% @student.recruitments.each do |recruitment| %>
+              <li class="my-2">
+                <% if @student == current_user %>
+                  Vous avez signalé un recrutement chez <span class="font-semibold">"<%= link_to recruitment.company.name, company_path(recruitment.company) %>"</span>.
+                <% else %>
+                  <%= @student.first_name %> a signalé un recrutement chez <span class="font-semibold">"<%= link_to recruitment.company.name, company_path(recruitment.company) %>"</span>.
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        <% elsif @student == current_user %>
+          <%= link_to "Une des entreprises dans lesquelles vous travaillez recrute ? Signalez-le en cliquant ici, afin de prévenir les autres alumnis.", recruitments_path %>
+        <% else %>
+          <p><%= @student.first_name %> n'a pas signalé de recrutement.</p>
+        <% end %>
+      </div>
+
+
+    </div>
+
+
+    <div class="experiences shadow-div wrapper">
+      <% if @student == current_user %>
+        <%= link_to updating_profil_exp_user_path do %>
+          <%= render 'shared/edit-icon' %>
+        <% end %>
+      <% end %>
+      <div class="content">
+        <div class="experiences mb-12">
+          <h3>EXPERIENCES</h3>
+          <% if @student.work_experiences.any? %>
+            <% @student.work_experiences.order(:end_time).reverse.each do |work_experience| %>
+              <%= render 'shared/work_experience-card', work_experience: work_experience %>
+            <% end %>
+          <% elsif @student == current_user && @student.linkedin_url.present? %>
+            <p>Nous récupérons vos expériences profressionnelles sur votre profil LinkedIn, revenez ultérieurement...</p>
+          <% elsif @student == current_user %>
+            <%= link_to edit_user_path(@student) do  %>
+              <p>Renseignez l'URL de votre profil LinkedIn pour ajouter automatiquement vos expériences professionnelles.</p>
+            <% end %>
+          <% else %>
+            <p><%= @student.first_name %> n'a pas ajouté d'expériences professionnelles.</p>
+          <% end %>
+        </div>
+        <div class="educations">
+          <h3>FORMATIONS</h3>
+          <% if @student.school_experiences.any? %>
+            <% @student.school_experiences.order(:end_time).reverse.each do |school_experience| %>
+              <%= render 'shared/school_experience-card', school_experience: school_experience %>
+            <% end %>
+          <% elsif @student == current_user && @student.linkedin_url.present? %>
+            <p>Nous récupérons vos formations sur votre profil LinkedIn, revenez ultérieurement...</p>
+          <% elsif @student == current_user %>
+            <%= link_to edit_user_path(@student) do  %>
+              <p>Renseignez l'URL de votre profil LinkedIn pour ajouter automatiquement vos formations.</p>
+            <% end %>
+          <% else %>
+            <p><%= @student.first_name %> n'a pas ajouté de formations.</p>
+          <% end %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <%= render 'shared/help-bubble' %>
+</div>
+
+
+
+
+
+
+
+
+

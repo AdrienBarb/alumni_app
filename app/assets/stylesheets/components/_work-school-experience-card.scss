@@ -1,0 +1,80 @@
+.work-school-experience-card {
+  display: flex;
+  max-width: 456px;
+  margin: 1rem 0;
+  align-items: center;
+  justify-content: start;
+
+  .icon {
+    background-color: $medium-gray;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+
+    img {
+      width: 80px;
+      height: 80px;
+      margin: 0;
+    }
+  }
+
+  .description {
+
+  p {
+    font-size: 13px;
+    margin: 0;
+    color: $medium-gray;
+  }
+
+
+  .title {
+    font-size: 16px;
+    margin: 0;
+    color: $gray;
+    font-weight: 600;
+  }
+
+  .establishment-name, .establishment-location {
+    text-align: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 0.6rem;
+    margin-top: 0;
+    color: $gray;
+  }
+
+
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+       li {
+        display: inline-block;
+       }
+
+      .line {
+        width: 1px;
+        height: 12px;
+        background-color: $gray;
+        display: block;
+      }
+    }
+  }
+
+  @media(max-width: 500px) {
+
+    margin: 0 0 1rem 0;
+
+    .icon {
+      display: none;
+    }
+}
+
+
+}

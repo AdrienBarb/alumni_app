@@ -1,0 +1,17 @@
+
+<div class="diploma-tag-big" id="diploma-<%= tag.diploma.try(:color) %>">
+  <% if current_page?(tags_path) || current_page?(tag_creation_tags_path)%>
+    <%= link_to tag_path(tag), method: :delete, class: 'remove-card' do %>
+      <i class="fas fa-trash"></i>
+    <% end %>
+
+    <span class="line"></span>
+  <% end %>
+
+
+  <h5><%=tag.diploma.try(:name) %></h5>
+  <p><%= tag.try(:year) %></p>
+  <% if current_page?(user_path(tag.user)) %>
+    <%= link_to '', { controller: "users", action: "index", diploma: tag.diploma.id, year: tag.year }, { class: 'cover-link' } %>
+  <% end %>
+</div>

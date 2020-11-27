@@ -1,0 +1,25 @@
+<div class="work-school-experience-card">
+  <div class="icon">
+    <%= image_tag('school.png') %>
+  </div>
+  <div class="description">
+    <p class="title"><%= school_experience.title %></p>
+    <ul>
+      <% if school_experience.location.present? && school_experience.school.name.present? %>
+        <li><p class="establishment-name"><%= school_experience.school.name %></p></li>
+        <li><span class="line"></span></li>
+        <li><p class="establishment-location"><%= school_experience.location  %></p></li>
+      <% else %>
+        <li><p class="establishment-name"><%= school_experience.school.name %></p></li>
+        <li><p class="establishment-location"><%= school_experience.location  %></p></li>
+      <% end %>
+    </ul>
+    <ul>
+      <% if school_experience.start_time.present? && school_experience.end_time.present? %>
+        <li><p><%= school_experience.start_time %> - <%= school_experience.end_time %></p></li>
+      <% else %>
+        <li><p><%= school_experience.start_time %> <%= school_experience.end_time %></p></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

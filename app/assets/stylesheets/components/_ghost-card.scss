@@ -1,0 +1,45 @@
+.ghost-card {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+
+  .full-name {
+    width: 320px;
+  }
+
+  .index {
+    margin: 0 2rem 0 0;
+  }
+
+  .full-name, .index {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @media(max-width: 800px) {
+    .index {
+      display: none;
+    }
+
+    .full-name {
+      width: auto;
+      margin-right: 2rem;
+      white-space: nowrap;
+    }
+  }
+
+  @media(max-width: 800px) {
+    flex-direction: column;
+
+    .full-name {
+      margin-right: 0;
+      margin-bottom: 0.2rem;
+    }
+  }
+}

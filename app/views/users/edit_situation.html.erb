@@ -1,0 +1,22 @@
+<div class="navbar-wrapper">
+  <%= render 'shared/alert' %>
+</div>
+<div class="edit-situation-wrapper">
+  <%= form_for @student do |f| %>
+    <div class="situation mb-6">
+      <h3>Situation</h3>
+      <div class="checkbox-online">
+        <%= f.check_box :looking_for_job %> <br />
+        <%= f.label "Je recherche un emploi" %> <br />
+      </div>
+       <div class="checkbox-online">
+        <%= f.check_box :looking_for_internship %> <br />
+        <%= f.label "Je recherche un stage" %> <br />
+      </div>
+    </div>
+
+    <%= f.submit 'Valider les modifications', class: 'full-button' %>
+
+  <% end %>
+</div>
+

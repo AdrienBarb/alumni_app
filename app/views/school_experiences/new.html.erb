@@ -1,0 +1,46 @@
+<div class="navbar-wrapper">
+  <%= render 'shared/alert' %>
+</div>
+<div class="new-edit-experience shadow-div card-container">
+
+  <h2>Ajouter une formation</h2>
+
+  <%= form_for @school_experience do |f| %>
+    <% if @school_experience.errors.any? %>
+      <%= render 'shared/error-form-message', model_name: @school_experience  %>
+    <% end %>
+
+    <div class="field-wrap">
+      <%= f.label :title, "Titre de la formation/diplôme" %>
+      <%= f.text_field :title, placeholder: 'ex: Master', class: 'form-field' %>
+    </div>
+    <div class="field-wrap">
+      <%= f.label :start_time, "Date de début" %>
+      <%= f.select :start_time, ((Time.zone.now.year - 70)..(Time.zone.now.year + 10)).to_a.reverse, :prompt => "Sélectionner une date", class: 'form-field' %>
+    </div>
+    <div class="online-fields">
+      <div class="field-wrap">
+        <%= f.label :end_time, "Date de fin" %>
+        <%= f.select :end_time, ((Time.zone.now.year - 70)..(Time.zone.now.year + 10)).to_a.reverse, :prompt => "Sélectionner une date", class: 'form-field' %>
+      </div>
+      <div class="checkbox-online">
+        <%= f.check_box :current, id: 'current_exp' %>
+        <%= f.label :current, 'Ceci est ma formation actuelle' %>
+      </div>
+    </div>
+    <%= f.fields_for :school, School.new do |school_attributes|%>
+      <div class="field-wrap" id="autocomplete-company" data-companies="<%= @schools.to_json %>">
+        <%= school_attributes.label :name, "Nom de l'école" %>
+        <%= school_attributes.text_field :name, placeholder: "ex: HEC", class: 'form-field autocomplete-input' %>
+      </div>
+    <% end %>
+    <div class="field-wrap">
+      <%= f.label :location, "Localisation" %>
+      <%= f.text_field :location, placeholder: 'ex: Lyon', class: 'form-field' %>
+    </div>
+
+    <%= f.submit "Ajouter", class: 'full-button' %>
+
+  <% end %>
+
+</div>

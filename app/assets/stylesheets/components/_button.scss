@@ -1,0 +1,109 @@
+.full-button {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 0 1rem;
+  text-decoration: none !important;
+  color: white !important;
+  background-color: $dark-blue;
+  border: 1px solid white;
+  text-align: center;
+  width: fit-content;
+  box-sizing: border-box;
+  white-space: nowrap;
+  height: 32px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+}
+
+.empty-button {
+  font-size: 14px;
+  border-radius: 5px;
+  padding: 0 1rem;
+  text-decoration: none !important;
+  color: $dark-blue !important;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid $dark-blue;
+  text-align: center;
+  width: fit-content;
+  box-sizing: border-box;
+  white-space: nowrap;
+  height: 32px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+}
+
+.empty-button.white {
+  color: white;
+  border-color: white;
+  height: 36px;
+}
+
+.back-button {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  width: fit-content;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 0px;
+  left: -112px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  i {
+    margin-right: 0.5rem;
+    font-size: 12px;
+  }
+}
+
+.arrow-button {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: fit-content;
+    color: white;
+    border: none;
+    background: none;
+    outline: 0;
+    cursor: pointer;
+    white-space: nowrap;
+
+    p {
+      margin: 0 0.5rem;
+    }
+}
+
+@media(max-width: 500px) {
+  .full-button {
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .empty-button {
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .arrow-button {
+    font-size: 12px;
+  }
+
+}

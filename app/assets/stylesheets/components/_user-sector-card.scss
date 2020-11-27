@@ -1,0 +1,30 @@
+.user-sector-card {
+  padding: 0.2rem 0.5rem;
+  color: $gray;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  border-radius: 5px;
+  border: 1px solid $gray;
+  margin-bottom: 0.5rem;
+  position: relative;
+
+  a {
+    color: $gray;
+  }
+
+  .line {
+    width: 1px;
+    height: 12px;
+    background-color: $gray;
+    margin: 0 0.5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  i {
+    font-size: 13px;
+  }
+}

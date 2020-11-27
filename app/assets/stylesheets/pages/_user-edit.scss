@@ -1,0 +1,79 @@
+.user-edit-wrapper {
+  margin: 4rem auto 2rem auto;
+  max-width: 400px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.25);
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  h3 {
+    margin-top: 0;
+    color: $dark-blue;
+  }
+
+
+  img {
+    width: 160px;
+    border-radius: 50%;
+  }
+
+  .photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+
+  .notif {
+    border: 2px solid red;
+    padding: 0 0.5rem;
+    border-radius: 8px;
+    font-size: 10px;
+    width: 80%;
+    width: 100%;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .edit-field-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: $gray;
+
+    i {
+      color: $gray;
+      font-size: 22px;
+      width: 26px;
+    }
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .edit-input-field {
+    width: -webkit-fill-available;
+    padding-left: 0.5rem;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    height: 26px;
+    font-size: 14px;
+    margin-left: 0.5rem;
+    color: $gray;
+  }
+
+  .full-button {
+    margin: 1rem 0;
+  }
+
+}

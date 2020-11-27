@@ -1,0 +1,15 @@
+<div class="company-school-card shadow-div card-container">
+  <% if company.photo.attached? %>
+    <%= cl_image_tag company.photo.key, class: hiring_color(company) %>
+  <% else %>
+    <%= image_tag "company.png", alt: "company-image", class: hiring_color(company) %>
+  <% end %>
+  <div class="company-school-card-info">
+    <h2><%= company.name %></h2>
+    <h3><%= company.city %></h3>
+    <div class="recruiting">
+      <p><%= pluralize company.users.uniq.count, 'alumni travaille ici', 'alumni travaillent ici' %></p>
+    </div>
+  </div>
+  <%= link_to '', company_path(company), class: 'cover-link'  %>
+</div>

@@ -1,0 +1,27 @@
+.tags-index-wrap {
+  max-width: 600px;
+  margin: 12rem auto;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.25);
+  position: relative;
+  text-align: center;
+
+  h3 {
+    color: $dark-blue;
+    text-align: center;
+  }
+
+  .tags-index {
+    text-align: initial;
+  }
+
+  .diploma-tag-big {
+    margin-bottom: 0.5rem;
+  }
+
+  .empty-button {
+    border-color: $dark-blue !important;
+    color: $dark-blue !important;
+  }
+}

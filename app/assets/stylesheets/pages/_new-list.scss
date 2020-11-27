@@ -1,0 +1,37 @@
+.new-list-page-wrapper {
+  margin: 14rem 2rem 2rem 18rem;
+
+  .search-form-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 6rem 2rem 0 18rem;
+    background-color: #FAFAFA;
+    z-index: 6000;
+  }
+
+  .list-form {
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top > :first-child {
+      padding: 0;
+    }
+
+  }
+
+  .without-border {
+    width: 600px;
+    border: none;
+    font-size: 30px;
+    height: auto;
+    outline: none;
+  }
+
+
+}
