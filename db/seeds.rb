@@ -100,27 +100,27 @@ user8.photo.attach(io: open('seed_images/m6.jpg'), filename: 'avatar.jpg', conte
 user9 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: false, looking_for_internship: true)
 user9.photo.attach(io: open('seed_images/m7.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
 user10 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: true, looking_for_internship: false)
-user10.photo.attach(io: open('seed_images/m8.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user11 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: false, looking_for_internship: true)
-user11.photo.attach(io: open('seed_images/m9.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user12 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: true, looking_for_internship: false)
-user12.photo.attach(io: open('seed_images/m10.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user13 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: true, company_hire: false, looking_for_internship: false)
-user13.photo.attach(io: open('seed_images/m11.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user14 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: true, looking_for_internship: false)
-user14.photo.attach(io: open('seed_images/m12.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user15 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: true, looking_for_internship: true)
-user15.photo.attach(io: open('seed_images/m13.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user16 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: true, company_hire: false, looking_for_internship: false)
-user16.photo.attach(io: open('seed_images/m14.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user17 = User.create!(email:Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
-user17.photo.attach(io: open('seed_images/m15.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user18 = User.create!(email:Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
-user18.photo.attach(io: open('seed_images/m16.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user19 = User.create!(email:Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
-user19.photo.attach(io: open('seed_images/m17.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user20 = User.create!(email:Faker::Internet.email, password: 'password', first_name: Faker::Name.male_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
-user20.photo.attach(io: open('seed_images/m18.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 
 user21 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/in/adrien-barbier-5b479598/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
 user21.photo.attach(io: open('seed_images/w1.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
@@ -143,25 +143,25 @@ user29.photo.attach(io: open('seed_images/w9.jpg'), filename: 'avatar.jpg', cont
 user30 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: true, looking_for_internship: false)
 user30.photo.attach(io: open('seed_images/w10.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
 user31 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: false, looking_for_internship: true)
-user31.photo.attach(io: open('seed_images/w11.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user32 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: true, looking_for_internship: false)
-user32.photo.attach(io: open('seed_images/w12.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user33 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: true, company_hire: false, looking_for_internship: false)
-user33.photo.attach(io: open('seed_images/w13.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user34 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: true, looking_for_internship: false)
-user34.photo.attach(io: open('seed_images/w14.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user35 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: false, company_hire: true, looking_for_internship: true)
-user35.photo.attach(io: open('seed_images/w15.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user36 = User.create(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0634523911', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0634523911', looking_for_job: true, company_hire: false, looking_for_internship: false)
-user36.photo.attach(io: open('seed_images/w16.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user37 = User.create!(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
-user37.photo.attach(io: open('seed_images/w17.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user38 = User.create!(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
-user38.photo.attach(io: open('seed_images/w18.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user39 = User.create!(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
-user39.photo.attach(io: open('seed_images/w19.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 user40 = User.create!(email: Faker::Internet.email, password: 'password', first_name: Faker::Name.female_first_name, last_name: Faker::Name.last_name, phone_number: '0679093818', linkedin_url: 'https://www.linkedin.com/feed/', whatsapp_number: '0679093818', looking_for_job: true, company_hire: true, looking_for_internship: false, admin: true)
-user40.photo.attach(io: open('seed_images/w20.jpg'), filename: 'avatar.jpg', content_type: 'image/jpg')
+
 
 puts 'User creation OK'
 
